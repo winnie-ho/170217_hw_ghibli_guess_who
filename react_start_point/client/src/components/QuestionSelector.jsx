@@ -2,7 +2,15 @@ var React = require ("react");
 
 var QuestionSelector = React.createClass({
   getInitialState: function(){
-    return {selectedIndex: undefined};
+    return {selectedIndex: undefined, answer: null};
+  },
+
+  handleChange: function(event){
+    var newIndex = event.target.value;
+    this.setState({selectedIndex: newIndex});
+    var questionAsked = this.props.questions[newIndex];
+    console.log("question asked", questionAsked);
+
   },
 
   render: function(){
@@ -12,7 +20,12 @@ var QuestionSelector = React.createClass({
       })
 
     return(
-      <select id = "questions" value = {this.state.selectedIndex}> {options} </select>
+      <div>
+      <p> Ask a Question
+      <select id = "questions" value = {this.state.selectedIndex} onChange = {this.handleChange} > {options} </select>
+      </p>
+      <h1>{this.state.answer}</h1>
+      </div>
       );
   }
 });
