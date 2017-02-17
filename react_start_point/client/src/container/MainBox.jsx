@@ -1,13 +1,17 @@
 var React = require("react");
 var Board = require("../components/Board.jsx");
-var QuestionsSelector = require ("../components/QuestionsSelector.jsx");
+var CharacterSelector = require ("../components/CharacterSelector.jsx");
+var QuestionSelector = require ("../components/QuestionSelector.jsx")
 
 var MainBox = React.createClass({
   getInitialState: function(){
-    return {board: ["../resources/totoro.png",
+    return {
+      board: ["../resources/totoro.png",
     "../resources/ponyo.png",
     "../resources/noface.png",
-     "../resources/baron.png"]}
+     "../resources/baron.png"],
+      characters: ["totoro", "ponyo", "noface", "baron"],
+      questions: ["is an animal?", "has no face?", "has a tail?", "is wearing clothes?"]}
   },
 
   winGame: function(){
@@ -48,7 +52,8 @@ var MainBox = React.createClass({
     return (
       <div className = "main-box">
       <h1>Ghibli Guess Who</h1>
-      <QuestionsSelector characters = {this.state.board}/>
+      Guess Who: <CharacterSelector characters = {this.state.characters}/>
+      Ask a Question: <QuestionSelector questions = {this.state.questions}/>
       <Board board = {this.state.board} turn = {this.turn} />
       </div>
       );

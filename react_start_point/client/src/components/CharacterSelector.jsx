@@ -1,6 +1,6 @@
 var React = require ("react");
 
-var QuestionsSelector = React.createClass({
+var CharacterSelector = React.createClass({
   getInitialState: function(){
     return {selectedIndex: undefined};
   },
@@ -8,7 +8,7 @@ var QuestionsSelector = React.createClass({
   render: function(){
     var options = this.props.characters.map(
       function(character, index){
-        return<option value ={index} key = {index}> {character.name} </option>
+        return<option value ={index} key = {index}> {character} </option>
       })
 
     return(
@@ -17,4 +17,4 @@ var QuestionsSelector = React.createClass({
   }
 });
 
-module.exports = QuestionsSelector;
+module.exports = CharacterSelector;
