@@ -11,7 +11,7 @@ var CharacterSelector = React.createClass({
     var guess = this.props.characters[newIndex];
     if(guess === this.props.chosen){
       this.setState({win: "You Win!"})
-      ;console.log("win!");
+      console.log("win!");
     }
   },
 
@@ -29,7 +29,7 @@ var CharacterSelector = React.createClass({
       <p>Guess Who:
       <select id = "characters" value = {this.state.selectedIndex} onChange = {this.handleChange}> {options} </select>
       </p>
-      <h1>{this.state.win}</h1>
+      <h2>{this.state.win}</h2>
       </div>
       );
   }

@@ -1,5 +1,6 @@
 body{
-  font-family: dosis;
+  font-family: Avenir;
+  background-color: #1B9DCF
 }
 
 
@@ -9,7 +10,9 @@ input{
   margin: 5px;
 }
 
+
 .card{
+  background-color: white;
   border-radius: 5px;
   border: solid gray 1px;
   padding: 10px;
@@ -25,7 +28,7 @@ input{
 
 .check-area{
   width: 800px;
-  height: 150px;
+  height: 100px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -77,6 +80,13 @@ img{
 
 h1{
   margin-top: 0px;
- font-size: 40px; 
+  margin-bottom: 0px;
+  font-size: 40px; 
+  color: white;
+}
+
+h2{
+  margin: 0px;
+  color:white;
 }
 

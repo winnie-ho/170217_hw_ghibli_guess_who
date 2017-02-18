@@ -1,20 +1,12 @@
-var Character = function(name, glasses, hair, gender){
+var Character = function(name, animal, tail, clothes, vehicle, spiritual){
   this.name = name;
-  this.glasses = boolean;
-  this.hair = hair;
-  this.gender = boolean;
-
-
-  Character.prototype = {
-    getName: function(){
-      return this.name;
-    },
-
-    getGlasses: function(){
-      return this.glasses;
-    }
-  }
+  this.animal = animal;
+  this.tail = tail;
+  this.clothes = clothes;
+  this.vehicle = vehicle;
+  this.spiritual = spiritual;
 
 }
+
 
 module.exports = Character;

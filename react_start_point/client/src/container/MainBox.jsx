@@ -2,9 +2,27 @@ var React = require("react");
 var Board = require("../components/Board.jsx");
 var CharacterSelector = require ("../components/CharacterSelector.jsx");
 var QuestionSelector = require ("../components/QuestionSelector.jsx")
+var Character = require("../components/models/character");
 
 var MainBox = React.createClass({
   getInitialState: function(){
+    var characterArray = [];
+
+      var totoro = new Character("Totoro", "Yes", "Yes", "No", "No", "No");
+      var ponyo = new Character("Ponyo", "Yes", "Yes", "No", "No", "No");
+      var noface = new Character("No Face", "No", "No", "Yes", "No", "Yes");
+      var baron = new Character("Baron", "Yes", "Yes", "Yes", "No", "No");
+      var kittenbus = new Character("Kitten Bus", "Yes", "Yes", "No", "Yes", "No");
+      var kodama = new Character("Kodama", "No", "No", "No", "No", "Yes");
+
+
+      characterArray.push(totoro);
+      characterArray.push(ponyo);
+      characterArray.push(noface);
+      characterArray.push(baron);
+      characterArray.push(kittenbus);
+      characterArray.push(kodama);
+
     return {
       board: ["../resources/totoro.png",
     "../resources/ponyo.png",
@@ -12,11 +30,13 @@ var MainBox = React.createClass({
      "../resources/baron.png",
      "../resources/kittenbus.png",
      "../resources/kodama.png"],
+      characterArray: characterArray,
       characters: ["select","Totoro", "Ponyo", "Noface", "Baron", "Kitten Bus", "Kodama"],
-      questions: ["select","is an animal?", "has no face?", "has a tail?", "is wearing clothes?", "is a vehicle?"],
+      questions: ["select","is an animal?", "has a tail?", "is wearing clothes?", "is a vehicle?", "is a spirit?"],
       chosen: null,
-      answer: null,
-      focusCharacter: null }
+      chosenObject: null,
+      focusCharacter: null
+      }
   },
 
   checkGuess: function(event){
@@ -27,6 +47,11 @@ var MainBox = React.createClass({
     var randomIndex = Math.floor((Math.random() * this.state.characters.length) + 1)
     var chosenCharacter = this.state.characters[randomIndex];
     this.setState({chosen: chosenCharacter});
+    var chosenCharacterObject = this.state.characterArray[randomIndex-1]
+    this.setState({chosenObject: chosenCharacterObject});
+    console.log("chosenObject: ", chosenCharacterObject);
+    
+
   },
 
   turn: function(event){
@@ -79,8 +104,7 @@ var MainBox = React.createClass({
       <div className = "main-box">
       <h1>Ghibli Guess Who</h1>
       <CharacterSelector characters = {this.state.characters} chosen = {this.state.chosen} selectCharacter = {this.setFocusCharacter} check = {this.checkGuess}/>
-      <QuestionSelector questions = {this.state.questions}/>
-      Answer: {this.state.answer}
+      <QuestionSelector questions = {this.state.questions} characterArray = {this.state.characterArray} chosen = {this.state.chosen} chosenObject = {this.state.chosenObject}/>
       <Board board = {this.state.board} turn = {this.turn} />
       </div>
       );
