@@ -86,6 +86,14 @@ var QuestionSelector = React.createClass({
           console.log("answer:", this.state.answer);
         }
       }
+    }else if(newIndex == 10){
+      for (var character of this.props.characterArray){
+        console.log(character.witch);
+        if(character.witch === this.props.chosenObject.witch){
+          this.setState({answer: character.witch})
+          console.log("answer:", this.state.answer);
+        }
+      }
     }
   },
 

@@ -8,20 +8,20 @@ var MainBox = React.createClass({
   getInitialState: function(){
     var characterArray = [];
 
-      var totoro = new Character("Totoro", "../resources/totoro.png", "Yes", "Yes", "No", "No", "Yes", "No", "No", "No", "No")
-      var ponyo = new Character("Ponyo", "../resources/ponyo.png", "Yes", "Yes", "No", "No", "No", "No", "No", "No", "Yes")
-      var noface = new Character("No Face", "../resources/noface.png", "No", "No", "Yes", "No", "Yes", "No", "No", "No", "No")
-      var baron = new Character("Baron", "../resources/baron.png", "Yes", "Yes", "Yes", "No", "No", "No", "No", "No", "No")
-      var kittenbus = new Character("Kitten Bus", "../resources/kittenbus.png", "Yes", "Yes", "No", "Yes", "No", "No", "No", "No", "No")
-      var kodama = new Character("Kodama", "../resources/kodama.png", "No", "No", "No", "No", "Yes", "No", "No", "No", "No")
-      var satsuki = new Character("Satsuki", "../resources/satsuki.png", "No", "No", "Yes", "No", "No", "No", "No", "No", "No")
-      var calcifier = new Character("Calcifier", "../resources/calcifier.png", "No", "No", "No", "No", "No", "No", "No", "Yes", "No")
-      var fujimoto = new Character("Fujimoto", "../resources/fujimoto.png", "No", "No", "Yes", "No", "No", "No", "No", "No", "Yes")
-      var chihiro = new Character("Chihiro", "../resources/chihiro.png", "No", "No", "Yes", "No", "No", "No", "No", "No", "No")
-      var gonta = new Character("Gonta", "../resources/gonta.jpg", "Yes", "Yes", "No", "No", "No", "No", "No", "No", "No")
-      var mononoke = new Character("Mononoke", "../resources/mononoke.png", "No", "No", "Yes", "No", "No", "Yes", "Yes", "No", "No")
-      var yubaba = new Character("Yubaba", "../resources/yubaba.png", "No", "No", "Yes", "No", "Yes", "No", "No", "No", "No")
-      var nausicaa = new Character("Nausicaa", "../resources/nausicaa.png", "No", "No", "Yes", "No", "No", "Yes", "No", "No", "No")
+      var totoro = new Character("Totoro", "../resources/totoro.png", "Yes", "Yes", "No", "No", "Yes", "No", "No", "No", "No", "No")
+      var ponyo = new Character("Ponyo", "../resources/ponyo.png", "Yes", "Yes", "No", "No", "No", "No", "No", "No", "Yes", "No")
+      var noface = new Character("No Face", "../resources/noface.png", "No", "No", "Yes", "No", "Yes", "No", "No", "No", "No", "No")
+      var baron = new Character("Baron", "../resources/baron.png", "Yes", "Yes", "Yes", "No", "No", "No", "No", "No", "No", "No")
+      var kittenbus = new Character("Kitten Bus", "../resources/kittenbus.png", "Yes", "Yes", "No", "Yes", "No", "No", "No", "No", "No", "No")
+      var kodama = new Character("Kodama", "../resources/kodama.png", "No", "No", "No", "No", "Yes", "No", "No", "No", "No", "No")
+      var satsuki = new Character("Satsuki", "../resources/satsuki.png", "No", "No", "Yes", "No", "No", "No", "No", "No", "No", "No")
+      var calcifier = new Character("Calcifier", "../resources/calcifier.png", "No", "No", "No", "No", "No", "No", "No", "Yes", "No", "No")
+      var fujimoto = new Character("Fujimoto", "../resources/fujimoto.png", "No", "No", "Yes", "No", "No", "No", "No", "No", "Yes", "No")
+      var chihiro = new Character("Chihiro", "../resources/chihiro.png", "No", "No", "Yes", "No", "No", "No", "No", "No", "No", "No")
+      var gonta = new Character("Gonta", "../resources/gonta.jpg", "Yes", "Yes", "No", "No", "No", "No", "No", "No", "No", "No")
+      var mononoke = new Character("Mononoke", "../resources/mononoke.png", "No", "No", "Yes", "No", "No", "Yes", "Yes", "No", "No", "No")
+      var yubaba = new Character("Yubaba", "../resources/yubaba.png", "No", "No", "Yes", "No", "Yes", "No", "No", "No", "No", "Yes")
+      var nausicaa = new Character("Nausicaa", "../resources/nausicaa.png", "No", "No", "Yes", "No", "No", "Yes", "No", "No", "No", "No")
 
 
       characterArray.push(totoro);
@@ -42,7 +42,7 @@ var MainBox = React.createClass({
     return {
       characterArray: characterArray,
       characters: ["select","Totoro", "Ponyo", "Noface", "Baron", "Kitten Bus", "Kodama", "Satsuki", "Calcifier", "Fujimoto", "Chihiro", "Gonta", "Mononoke", "Yubaba", "Nausicaa"],
-      questions: ["select","is an animal?", "has a tail?", "is wearing clothes?", "is a vehicle?", "is a spirit?", "is a princess?", "can speak to wolves?", "was originally a falling star?", "lives under water?"],
+      questions: ["select","is an animal?", "has a tail?", "is wearing clothes?", "is a vehicle?", "is a spirit?", "is a princess?", "can speak to wolves?", "was originally a falling star?", "lives under water?", "is a witch?"],
       chosen: null,
       chosenObject: null,
       focusCharacter: null
@@ -152,8 +152,8 @@ var MainBox = React.createClass({
     return (
       <div className = "main-box">
       <h1>Ghibli Guess Who</h1>
-      <CharacterSelector characters = {this.state.characters} chosen = {this.state.chosen} selectCharacter = {this.setFocusCharacter} check = {this.checkGuess} characterArray = {this.state.characterArray}/>
       <QuestionSelector questions = {this.state.questions} characterArray = {this.state.characterArray} chosen = {this.state.chosen} chosenObject = {this.state.chosenObject}/>
+      <CharacterSelector characters = {this.state.characters} chosen = {this.state.chosen} selectCharacter = {this.setFocusCharacter} check = {this.checkGuess} characterArray = {this.state.characterArray}/>
       <Board turn = {this.turn} characterArray = {this.state.characterArray} />
       </div>
       );
