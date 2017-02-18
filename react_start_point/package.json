@@ -1,17 +1,19 @@
 {
-  "name": "end_point",
+  "name": "ghibli_guesswho",
   "version": "1.0.0",
+  "description": "",
+  "engines": {
+    "node": "5.9.1"
+  },
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
-  "keywords": [],
-  "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.13.4"
-  },
-  "devDependencies": {},
-  "description": ""
+    "express": "4.14.1",
+    "foobar": "^1.1.0",
+    "webpack": "2.2.1"
+  }
 }
