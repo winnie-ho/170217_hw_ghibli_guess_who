@@ -7,7 +7,7 @@ var Character = require("../components/models/character");
 var MainBox = React.createClass({
   getInitialState: function(){
     var characterArray = [];
-      
+
       var totoro = new Character("Totoro", "../resources/totoro.png", "Yes", "Yes", "No", "No", "No");
       var ponyo = new Character("Ponyo", "../resources/ponyo.png", "Yes", "Yes", "No", "No", "No")
       var noface = new Character("No Face", "../resources/noface.png", "No", "No", "Yes", "No", "Yes")
@@ -16,6 +16,7 @@ var MainBox = React.createClass({
       var kodama = new Character("Kodama", "../resources/kodama.png", "No", "No", "No", "No", "Yes")
       var satsuki = new Character("Satsuki", "../resources/satsuki.png", "No", "No", "Yes", "No", "No")
       var calcifier = new Character("Calcifier", "../resources/calcifier.png", "No", "No", "No", "No", "No")
+      var fujimoto = new Character("Fujimoto", "../resources/fujimoto.png", "No", "No", "Yes", "No", "No")
 
 
       characterArray.push(totoro);
@@ -26,10 +27,11 @@ var MainBox = React.createClass({
       characterArray.push(kodama);
       characterArray.push(satsuki);
       characterArray.push(calcifier);
+      characterArray.push(fujimoto);
 
     return {
       characterArray: characterArray,
-      characters: ["select","Totoro", "Ponyo", "Noface", "Baron", "Kitten Bus", "Kodama", "Satsuki", "Calcifier"],
+      characters: ["select","Totoro", "Ponyo", "Noface", "Baron", "Kitten Bus", "Kodama", "Satsuki", "Calcifier", "Fujimoto"],
       questions: ["select","is an animal?", "has a tail?", "is wearing clothes?", "is a vehicle?", "is a spirit?"],
       chosen: null,
       chosenObject: null,
@@ -93,6 +95,11 @@ var MainBox = React.createClass({
       8: () =>{
         this.state.characterArray[7].image = "../resources/card.png"
         this.state.characterArray[7].name = "-"
+        return(this.state.characterArray)
+      },
+      9: () =>{
+        this.state.characterArray[8].image = "../resources/card.png"
+        this.state.characterArray[8].name = "-"
         return(this.state.characterArray)
       }
     }
