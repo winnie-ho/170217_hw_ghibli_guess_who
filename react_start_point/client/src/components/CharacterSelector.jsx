@@ -11,8 +11,10 @@ var CharacterSelector = React.createClass({
     var guess = this.props.characters[newIndex];
     if(guess === this.props.chosen){
       this.setState({win: "You Win!"})
-      console.log("win!");
     }
+      else {
+        this.setState({win: "Try Again!"})
+      }
   },
 
   checkCharacter: function(){

@@ -64,11 +64,12 @@ var QuestionSelector = React.createClass({
       })
 
     return(
-      <div>
+      <div className = "answer">
       <p> Ask a Question
-      <select id = "questions" value = {this.state.selectedIndex} onChange = {this.handleChange} > {options} </select>
+      <select id = "questions" value = {this.state.selectedIndex} onChange = {this.handleChange}> {options} </select>
       </p>
-      <h2>Answer: {this.state.answer}</h2>
+
+      <h2>{this.state.answer}</h2>
       </div>
       );
   }

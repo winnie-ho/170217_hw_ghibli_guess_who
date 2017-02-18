@@ -10,6 +10,17 @@ input{
   margin: 5px;
 }
 
+.answer{
+  height: 100px;
+  width: 250px;
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: row;
+  align-content: center;
+  align-items: flex-start;
+
+}
 
 .card{
   background-color: white;
