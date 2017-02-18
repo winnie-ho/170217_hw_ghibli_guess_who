@@ -54,6 +54,14 @@ var QuestionSelector = React.createClass({
           console.log("answer:", this.state.answer);
         }
       }
+    }else if(newIndex == 6){
+      for (var character of this.props.characterArray){
+        console.log(character.spiritual);
+        if(character.spiritual === this.props.chosenObject.spiritual){
+          this.setState({answer: character.spiritual})
+          console.log("answer:", this.state.answer);
+        }
+      }
     }
   },
 

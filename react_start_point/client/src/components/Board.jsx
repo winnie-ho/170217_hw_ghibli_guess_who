@@ -2,10 +2,13 @@ var React = require ("react");
 var Board = React.createClass({
 
   render: function(){
-    var buttonNodes = this.props.board.map((button, index)=>{
+    var buttonNodes = this.props.characterArray.map((button, index)=>{
       return(
+        <div className = "card-block">
         <div className = "card">
-        <input key = {index} type = "image" value = {index + 1} src = {button}  onClick = {this.props.turn}/>
+        <input key = {index} type = "image" value = {index + 1} src = {button.image}  onClick = {this.props.turn}/>
+        </div>
+        <p>{button.name}</p>
         </div>
         )
     })
@@ -14,9 +17,9 @@ var Board = React.createClass({
     return (
       <div className = "page">
 
-      <div className = "grid">
+
       {buttonNodes}
-      </div>
+
 
       </div>
       )
