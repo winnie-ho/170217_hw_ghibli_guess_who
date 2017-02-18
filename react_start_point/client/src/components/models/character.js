@@ -1,4 +1,4 @@
-var Character = function(name, image, animal, tail, clothes, vehicle, spiritual){
+var Character = function(name, image, animal, tail, clothes, vehicle, spiritual, princess, wolves, star, sea){
   this.name = name;
   this.image = image;
   this.animal = animal;
@@ -6,7 +6,10 @@ var Character = function(name, image, animal, tail, clothes, vehicle, spiritual)
   this.clothes = clothes;
   this.vehicle = vehicle;
   this.spiritual = spiritual;
-
+  this.princess = princess;
+  this.wolves = wolves;
+  this.star = star;
+  this.sea = sea;
 }
 
 

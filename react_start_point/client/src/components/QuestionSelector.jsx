@@ -56,9 +56,33 @@ var QuestionSelector = React.createClass({
       }
     }else if(newIndex == 6){
       for (var character of this.props.characterArray){
-        console.log(character.spiritual);
-        if(character.spiritual === this.props.chosenObject.spiritual){
-          this.setState({answer: character.spiritual})
+        console.log(character.princess);
+        if(character.princess === this.props.chosenObject.princess){
+          this.setState({answer: character.princess})
+          console.log("answer:", this.state.answer);
+        }
+      }
+    }else if(newIndex == 7){
+      for (var character of this.props.characterArray){
+        console.log(character.wolves);
+        if(character.wolves === this.props.chosenObject.wolves){
+          this.setState({answer: character.wolves})
+          console.log("answer:", this.state.answer);
+        }
+      }
+    }else if(newIndex == 8){
+      for (var character of this.props.characterArray){
+        console.log(character.star);
+        if(character.star === this.props.chosenObject.star){
+          this.setState({answer: character.star})
+          console.log("answer:", this.state.answer);
+        }
+      }
+    }else if(newIndex == 9){
+      for (var character of this.props.characterArray){
+        console.log(character.sea);
+        if(character.sea === this.props.chosenObject.sea){
+          this.setState({answer: character.sea})
           console.log("answer:", this.state.answer);
         }
       }
