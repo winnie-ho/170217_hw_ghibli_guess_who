@@ -147,11 +147,18 @@ var MainBox = React.createClass({
     console.log(this.state.focusCharacter);
   },
 
+  restart: function(){
+    window.location.reload();
+  },
+
   render: function(){
     console.log("chosenCharacter:", this.state.chosen);
     return (
       <div className = "main-box">
       <h1>Ghibli Guess Who</h1>
+      <div className = "restart">
+        <button onClick = {this.restart}>Restart</button>
+      </div>
       <QuestionSelector questions = {this.state.questions} characterArray = {this.state.characterArray} chosen = {this.state.chosen} chosenObject = {this.state.chosenObject}/>
       <CharacterSelector characters = {this.state.characters} chosen = {this.state.chosen} selectCharacter = {this.setFocusCharacter} check = {this.checkGuess} characterArray = {this.state.characterArray}/>
       <Board turn = {this.turn} characterArray = {this.state.characterArray} />

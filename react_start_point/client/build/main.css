@@ -10,6 +10,22 @@ input{
   margin: 5px;
 }
 
+.restart {
+  width: 600px;
+  margin: -15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+button{
+  text-decoration: none;
+  border: 1px white solid;
+  background: #1B9DCF;
+  border-radius: 5px;
+  color: white;
+}
+
 .check-area{
   width: 500px;
   height: 50px;
