@@ -1,8 +1,8 @@
-var React = require("react");
-var Board = require("../components/Board.jsx");
-var CharacterSelector = require ("../components/CharacterSelector.jsx");
-var QuestionSelector = require ("../components/QuestionSelector.jsx")
-var Character = require("../components/models/character");
+const React = require("react");
+const Board = require("../components/Board/Board.jsx");
+const CharacterSelector = require ("../components/CharactorSelector/CharacterSelector.jsx");
+const QuestionSelector = require ("../components/QuestionSelector/QuestionSelector.jsx")
+const Character = require("../models/character");
 
 var MainBox = React.createClass({
   getInitialState: function(){

@@ -1,8 +1,11 @@
-var React = require ("react");
+const React = require ("react");
 
-var QuestionSelector = React.createClass({
+const QuestionSelector = React.createClass({
   getInitialState: function(){
-    return {selectedIndex: undefined, answer: null};
+    return {
+      selectedIndex: undefined,
+      answer: null
+    };
   },
 
   handleChange: function(event){

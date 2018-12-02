@@ -1,8 +1,11 @@
-var React = require ("react");
+const React = require ("react");
 
-var CharacterSelector = React.createClass({
+const CharacterSelector = React.createClass({
   getInitialState: function(){
-    return {selectedIndex: undefined, win: null};
+    return {
+      selectedIndex: undefined, 
+      win: null
+    };
   },
 
   handleChange: function(event){
