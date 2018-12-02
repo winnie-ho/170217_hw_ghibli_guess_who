@@ -4,7 +4,6 @@ body{
   color: white;
 }
 
-
 input{
   width: 140px;
   font-size: 0%;
@@ -17,20 +16,11 @@ button{
   background: #1B9DCF;
   border-radius: 5px;
   color: white;
+  margin: 10px;
 }
 
 select{
   margin: 5px;
-}
-
-button{
-  margin: 5px;
-}
-
-#app {
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 img{
