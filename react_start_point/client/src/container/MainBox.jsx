@@ -80,10 +80,8 @@ const MainBox = React.createClass({
 
   generateChosen: function(){
     const randomIndex = Math.floor((Math.random() * this.state.characters.length) + 1)
-    const chosenCharacter = this.state.characters[randomIndex];
-    this.setState({ chosen: chosenCharacter });
-    const chosenCharacterObject = this.state.characterArray[randomIndex-1]
-    this.setState({ chosenObject: chosenCharacterObject });
+    this.setState({ chosen: this.state.characters[ randomIndex ] });
+    this.setState({ chosenObject: this.state.characterArray[ randomIndex - 1 ] });
   },
 
   turn: function(event){
@@ -161,8 +159,8 @@ const MainBox = React.createClass({
       }
     }
 
-    const newCharacterArray = lookup[personSelect]();
-    this.setState({characterArray: newCharacterArray});
+    const newCharacterArray = lookup[ personSelect ]();
+    this.setState({ characterArray: newCharacterArray });
   },
 
 
