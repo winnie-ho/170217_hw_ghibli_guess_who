@@ -3,6 +3,7 @@ import Board from "../components/board/board.jsx";
 import CharacterSelector from"../components/charactorSelector/characterSelector.jsx";
 import QuestionSelector from"../components/QuestionSelector/questionSelector.jsx";
 import Character from "../models/character";
+import "./mainBox.css"
 
 const MainBox = React.createClass({
   getInitialState: function(){
@@ -180,11 +181,8 @@ const MainBox = React.createClass({
   render: function(){
     console.log("chosenCharacter:", this.state.chosen);
     return (
-      <div className = "main-box">
+      <div className="main-box">
         <h1>Ghibli Guess Who</h1>
-        <div className = "restart">
-          <button onClick = {this.restart}>Restart</button>
-        </div>
         <QuestionSelector 
           questions={ this.state.questions } 
           characterArray={ this.state.characterArray }
@@ -198,6 +196,7 @@ const MainBox = React.createClass({
           check={ this.checkGuess }
           characterArray={ this.state.characterArray }/>
 
+        <button className="restart" onClick = {this.restart}>Restart</button>
         <Board 
           turn={ this.turn }
           characterArray={ this.state.characterArray }/>
