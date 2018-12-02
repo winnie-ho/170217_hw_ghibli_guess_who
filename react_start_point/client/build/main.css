@@ -46,32 +46,6 @@ button{
   align-items: center;
 }
 
-.card-block{
-  height: 320px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  justify-content: center;
-}
-
-.card{
-  background-color: white;
-  border-radius: 5px;
-  border: solid gray 1px;
-  padding: 10px;
-  width: 155px;
-  height: 230px;
-  margin: 5px;
-  padding: 5px;
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  align-items: center;
-  justify-content: center;
-}
-
-
 select{
   margin: 5px;
 }
@@ -94,13 +68,6 @@ button{
   justify-content: space-around;
   align-content: center;
 
-}
-
-.page{
-  display: inline-flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
 }
 
 img{
