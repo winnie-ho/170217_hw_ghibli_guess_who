@@ -194,7 +194,11 @@ const MainBox = React.createClass({
           check={ this.checkGuess }
           characterArray={ this.state.characterArray }/>
 
-        <button className="restart" onClick = {this.restart}>Restart</button>
+        <button 
+          className="restart" 
+          onClick = {this.restart}>Restart
+        </button>
+        
         <Board 
           turn={ this.turn }
           characterArray={ this.state.characterArray }/>
