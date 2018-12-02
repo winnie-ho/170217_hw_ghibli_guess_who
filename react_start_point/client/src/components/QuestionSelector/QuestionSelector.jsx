@@ -1,4 +1,5 @@
-const React = require ("react");
+import React from "react";
+import "./questionSelector.css"
 
 const QuestionSelector = React.createClass({
   getInitialState: function(){
@@ -9,112 +10,94 @@ const QuestionSelector = React.createClass({
   },
 
   handleChange: function(event){
-    var newIndex = event.target.value;
-    this.setState({selectedIndex: newIndex});
-    var questionAsked = this.props.questions[newIndex];
-    console.log("question asked", questionAsked);
-    console.log("newIndex:", newIndex);
-    console.log("characterArray: ", this.props.characterArray);
+    const newIndex = event.target.value;
+    this.setState({ selectedIndex: newIndex });
 
-
-    if(newIndex == 1){
-      for (var character of this.props.characterArray){
-        console.log(character.animal);
+    if (newIndex == 1) {
+      for (let character of this.props.characterArray){
         if(character.animal === this.props.chosenObject.animal){
-          this.setState({answer: character.animal})
-          console.log("answer:", this.state.answer);
+          this.setState({ answer: character.animal })
         }
       }
-    }else if(newIndex == 2){
-      for (var character of this.props.characterArray){
-        console.log(character.tail);
+    } else if (newIndex == 2) {
+      for (let character of this.props.characterArray){
         if(character.tail === this.props.chosenObject.tail){
-          this.setState({answer: character.tail})
-          console.log("answer:", this.state.answer);
+          this.setState({ answer: character.tail })
         }
       }
-    }else if(newIndex == 3){
-      for (var character of this.props.characterArray){
-        console.log(character.clothes);
+    } else if (newIndex == 3) {
+      for (let character of this.props.characterArray){
         if(character.clothes === this.props.chosenObject.clothes){
-          this.setState({answer: character.clothes})
-          console.log("answer:", this.state.answer);
+          this.setState({ answer: character.clothes })
         }
       }
-    }else if(newIndex == 4){
-      for (var character of this.props.characterArray){
-        console.log(character.vehicle);
+    } else if (newIndex == 4) {
+      for (let character of this.props.characterArray){
         if(character.vehicle === this.props.chosenObject.vehicle){
-          this.setState({answer: character.vehicle})
-          console.log("answer:", this.state.answer);
+          this.setState({ answer: character.vehicle })
         }
       }
-    }else if(newIndex == 5){
-      for (var character of this.props.characterArray){
-        console.log(character.spiritual);
+    } else if (newIndex == 5) {
+      for (let character of this.props.characterArray){
         if(character.spiritual === this.props.chosenObject.spiritual){
-          this.setState({answer: character.spiritual})
-          console.log("answer:", this.state.answer);
+          this.setState({ answer: character.spiritual })
         }
       }
-    }else if(newIndex == 6){
-      for (var character of this.props.characterArray){
-        console.log(character.princess);
+    } else if (newIndex == 6) {
+      for (let character of this.props.characterArray){
         if(character.princess === this.props.chosenObject.princess){
-          this.setState({answer: character.princess})
-          console.log("answer:", this.state.answer);
+          this.setState({ answer: character.princess })
         }
       }
-    }else if(newIndex == 7){
-      for (var character of this.props.characterArray){
-        console.log(character.wolves);
+    } else if (newIndex == 7) {
+      for (let character of this.props.characterArray){
         if(character.wolves === this.props.chosenObject.wolves){
-          this.setState({answer: character.wolves})
-          console.log("answer:", this.state.answer);
+          this.setState({ answer: character.wolves })
         }
       }
-    }else if(newIndex == 8){
-      for (var character of this.props.characterArray){
-        console.log(character.star);
+    } else if (newIndex == 8) {
+      for (let character of this.props.characterArray){
         if(character.star === this.props.chosenObject.star){
-          this.setState({answer: character.star})
-          console.log("answer:", this.state.answer);
+          this.setState({ answer: character.star })
         }
       }
-    }else if(newIndex == 9){
-      for (var character of this.props.characterArray){
-        console.log(character.sea);
+    } else if (newIndex == 9) {
+      for (let character of this.props.characterArray){
         if(character.sea === this.props.chosenObject.sea){
-          this.setState({answer: character.sea})
-          console.log("answer:", this.state.answer);
+          this.setState({ answer: character.sea })
         }
       }
-    }else if(newIndex == 10){
-      for (var character of this.props.characterArray){
-        console.log(character.witch);
-        if(character.witch === this.props.chosenObject.witch){
-          this.setState({answer: character.witch})
-          console.log("answer:", this.state.answer);
+    } else if (newIndex == 10) {
+      for (let character of this.props.characterArray) {
+        if (character.witch === this.props.chosenObject.witch) {
+          this.setState({ answer: character.witch })
         }
       }
     }
   },
 
   render: function(){
-    var options = this.props.questions.map(
-      function(question, index){
-        return<option value ={index} key = {index}> {question} </option>
-      })
+    const options = this.props.questions.map((question, index) => {
+      return <option 
+              value={ index } 
+              key={ index }> 
+                {question}
+              </option>
+    });
 
     return(
-      <div className = "answer">
-      <p> Ask a Question
-      <select id = "questions" value = {this.state.selectedIndex} onChange = {this.handleChange}> {options} </select>
-      </p>
+      <div className="answer">
+        <p>Ask a Question</p>
+        <select 
+          id="questions" 
+          value={ this.state.selectedIndex }
+          onChange={ this.handleChange }>
+           { options } 
+          </select>
 
-      <h2>{this.state.answer}</h2>
+        <h2>{ this.state.answer }</h2>
       </div>
-      );
+    );
   }
 });
 
