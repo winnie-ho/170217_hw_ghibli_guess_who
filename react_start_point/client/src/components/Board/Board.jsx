@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './board-style.css';
+import './board.css';
 
 
 const Board = React.createClass({

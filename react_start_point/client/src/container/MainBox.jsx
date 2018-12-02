@@ -1,6 +1,6 @@
 const React = require("react");
-const Board = require("../components/Board/Board.jsx");
-const CharacterSelector = require ("../components/CharactorSelector/CharacterSelector.jsx");
+const Board = require("../components/board/board.jsx");
+const CharacterSelector = require ("../components/charactorSelector/characterSelector.jsx");
 const QuestionSelector = require ("../components/QuestionSelector/QuestionSelector.jsx")
 const Character = require("../models/character");
 
