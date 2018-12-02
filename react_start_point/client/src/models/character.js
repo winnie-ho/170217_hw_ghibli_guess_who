@@ -1,4 +1,4 @@
-var Character = function(name, image, animal, tail, clothes, vehicle, spiritual, princess, wolves, star, sea, witch){
+const Character = function(name, image, animal, tail, clothes, vehicle, spiritual, princess, wolves, star, sea, witch){
   this.name = name;
   this.image = image;
   this.animal = animal;

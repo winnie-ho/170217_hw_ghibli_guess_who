@@ -1,10 +1,8 @@
-var React = require("react");
-var ReactDOM = require("react-dom");
+import React from "react";
+import ReactDOM from "react-dom";
+import MainBox from "./container/MainBox";
 
-
-var MainBox = require("./container/MainBox");
-
-window.onload = function () {
+window.onload = () => {
   ReactDOM.render(
     <MainBox/>,
     document.getElementById("app")

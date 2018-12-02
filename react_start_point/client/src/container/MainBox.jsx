@@ -8,20 +8,20 @@ const MainBox = React.createClass({
   getInitialState: function(){
     const characterArray = [];
 
-    const totoro = new Character("Totoro", "../resources/totoro.png", "Yes", "Yes", "No", "No", "Yes", "No", "No", "No", "No", "No")
-    const ponyo = new Character("Ponyo", "../resources/ponyo.png", "Yes", "Yes", "No", "No", "No", "No", "No", "No", "Yes", "No")
-    const noface = new Character("No Face", "../resources/noface.png", "No", "No", "Yes", "No", "Yes", "No", "No", "No", "No", "No")
-    const baron = new Character("Baron", "../resources/baron.png", "Yes", "Yes", "Yes", "No", "No", "No", "No", "No", "No", "No")
-    const kittenbus = new Character("Kitten Bus", "../resources/kittenbus.png", "Yes", "Yes", "No", "Yes", "No", "No", "No", "No", "No", "No")
-    const kodama = new Character("Kodama", "../resources/kodama.png", "No", "No", "No", "No", "Yes", "No", "No", "No", "No", "No")
-    const satsuki = new Character("Satsuki", "../resources/satsuki.png", "No", "No", "Yes", "No", "No", "No", "No", "No", "No", "No")
-    const calcifier = new Character("Calcifier", "../resources/calcifier.png", "No", "No", "No", "No", "No", "No", "No", "Yes", "No", "No")
-    const fujimoto = new Character("Fujimoto", "../resources/fujimoto.png", "No", "No", "Yes", "No", "No", "No", "No", "No", "Yes", "No")
-    const chihiro = new Character("Chihiro", "../resources/chihiro.png", "No", "No", "Yes", "No", "No", "No", "No", "No", "No", "No")
-    const gonta = new Character("Gonta", "../resources/gonta.jpg", "Yes", "Yes", "No", "No", "No", "No", "No", "No", "No", "No")
-    const mononoke = new Character("Mononoke", "../resources/mononoke.png", "No", "No", "Yes", "No", "No", "Yes", "Yes", "No", "No", "No")
-    const yubaba = new Character("Yubaba", "../resources/yubaba.png", "No", "No", "Yes", "No", "Yes", "No", "No", "No", "No", "Yes")
-    const nausicaa = new Character("Nausicaa", "../resources/nausicaa.png", "No", "No", "Yes", "No", "No", "Yes", "No", "No", "No", "No")
+    const totoro = new Character("Totoro", "../resources/totoro.png", "Yes", "Yes", "No", "No", "Yes", "No", "No", "No", "No", "No");
+    const ponyo = new Character("Ponyo", "../resources/ponyo.png", "Yes", "Yes", "No", "No", "No", "No", "No", "No", "Yes", "No");
+    const noface = new Character("No Face", "../resources/noface.png", "No", "No", "Yes", "No", "Yes", "No", "No", "No", "No", "No");
+    const baron = new Character("Baron", "../resources/baron.png", "Yes", "Yes", "Yes", "No", "No", "No", "No", "No", "No", "No");
+    const kittenbus = new Character("Kitten Bus", "../resources/kittenbus.png", "Yes", "Yes", "No", "Yes", "No", "No", "No", "No", "No", "No");
+    const kodama = new Character("Kodama", "../resources/kodama.png", "No", "No", "No", "No", "Yes", "No", "No", "No", "No", "No");
+    const satsuki = new Character("Satsuki", "../resources/satsuki.png", "No", "No", "Yes", "No", "No", "No", "No", "No", "No", "No");
+    const calcifier = new Character("Calcifier", "../resources/calcifier.png", "No", "No", "No", "No", "No", "No", "No", "Yes", "No", "No");
+    const fujimoto = new Character("Fujimoto", "../resources/fujimoto.png", "No", "No", "Yes", "No", "No", "No", "No", "No", "Yes", "No");
+    const chihiro = new Character("Chihiro", "../resources/chihiro.png", "No", "No", "Yes", "No", "No", "No", "No", "No", "No", "No");
+    const gonta = new Character("Gonta", "../resources/gonta.jpg", "Yes", "Yes", "No", "No", "No", "No", "No", "No", "No", "No");
+    const mononoke = new Character("Mononoke", "../resources/mononoke.png", "No", "No", "Yes", "No", "No", "Yes", "Yes", "No", "No", "No");
+    const yubaba = new Character("Yubaba", "../resources/yubaba.png", "No", "No", "Yes", "No", "Yes", "No", "No", "No", "No", "Yes");
+    const nausicaa = new Character("Nausicaa", "../resources/nausicaa.png", "No", "No", "Yes", "No", "No", "Yes", "No", "No", "No", "No");
 
 
     characterArray.push(totoro);
@@ -40,9 +40,37 @@ const MainBox = React.createClass({
     characterArray.push(nausicaa);
 
     return {
-      characterArray: characterArray,
-      characters: ["select","Totoro", "Ponyo", "Noface", "Baron", "Kitten Bus", "Kodama", "Satsuki", "Calcifier", "Fujimoto", "Chihiro", "Gonta", "Mononoke", "Yubaba", "Nausicaa"],
-      questions: ["select","is an animal?", "has a tail?", "is wearing clothes?", "is a vehicle?", "is a spirit?", "is a princess?", "can speak to wolves?", "was originally a falling star?", "lives under water?", "is a witch?"],
+      characterArray,
+      characters: [ 
+        "select", 
+        "Totoro", 
+        "Ponyo", 
+        "Noface", 
+        "Baron", 
+        "Kitten Bus", 
+        "Kodama", 
+        "Satsuki", 
+        "Calcifier", 
+        "Fujimoto", 
+        "Chihiro", 
+        "Gonta", 
+        "Mononoke", 
+        "Yubaba", 
+        "Nausicaa"
+      ],
+      questions: [ 
+        "select",
+        "is an animal?", 
+        "has a tail?", 
+        "is wearing clothes?", 
+        "is a vehicle?", 
+        "is a spirit?", 
+        "is a princess?", 
+        "can speak to wolves?", 
+        "was originally a falling star?", 
+        "lives under water?", 
+        "is a witch?"
+      ],
       chosen: null,
       chosenObject: null,
       focusCharacter: null
