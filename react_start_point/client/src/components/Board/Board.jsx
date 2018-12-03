@@ -7,10 +7,11 @@ const Board = React.createClass({
   render: function(){
     const buttonNodes = this.props.characterArray.map((button, index) => {
       return(
-        <div className="card-container" >
+        <div 
+          className="card-container" 
+          key={ index }>
           <div className="card">
             <input 
-              key={ index } 
               type="image"
               value={ index + 1 }
               src={ button.image }
