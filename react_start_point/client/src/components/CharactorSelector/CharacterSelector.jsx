@@ -47,4 +47,4 @@ const CharacterSelector = React.createClass({
   }
 });
 
-module.exports = CharacterSelector;
+export default CharacterSelector;

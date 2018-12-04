@@ -207,4 +207,4 @@ const MainBox = React.createClass({
   }
 });
 
-module.exports = MainBox;
+export default MainBox;

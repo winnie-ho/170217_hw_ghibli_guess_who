@@ -14,4 +14,4 @@ const Character = function(name, image, animal, tail, clothes, vehicle, spiritua
 }
 
 
-module.exports = Character;
+export default Character;

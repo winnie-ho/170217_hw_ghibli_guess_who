@@ -101,4 +101,4 @@ const QuestionSelector = React.createClass({
   }
 });
 
-module.exports = QuestionSelector;
+export default QuestionSelector;
